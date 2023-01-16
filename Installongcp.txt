@@ -1,0 +1,18 @@
+sudo yum update  -- yes
+yum install docker
+systemctl enable docker
+systemctl start docker
+systemctl status docker
+
+yum install git
+git clone https://github.com/Jesus-ZFerrer/DemoFinal.git
+
+yum install python3-pip
+yum install python3-pip -y
+pip3 install flask
+
+docker build -t flaskapp .
+docker run --name dockercontainer -p 8181:81 -d flaskapp
+
+docker rm dockercontainer
+docker rmi flaskapp
