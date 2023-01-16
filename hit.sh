@@ -11,7 +11,7 @@ read -p "How many time do you want to hit the API? " hit
 x=1
 while [ $x -le $hit ]	
 	do 
-		curl localhost:8181/palindrome/$word >> Outputhits.txt
+		curl ipaddressfromcontainer:8000/palindrome/$word >> Outputhits.txt
 		echo " " >> Outputhits.txt
 		echo " " >> Outputhits.txt
 		let x+=1 
